@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentsUi.main.MainFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@android:color/white"
+
+           android:layout_width="match_parent"
+           android:layout_height="80dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatTextView
+                app:drawableTint="@color/mainColor"
+                android:textColor="@color/colorPrimary"
+                android:layout_margin="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:id="@+id/mainTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2020-06-18 Döviz Kurları"
+                android:drawableRight="@android:drawable/ic_dialog_info" />
+
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:background="@color/mainColor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </View>
+
+    <ProgressBar
+        android:padding="150dp"
+        android:indeterminateTint="@color/mainColor"
+        android:id="@+id/progressBarRecycler"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ProgressBar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerDoviz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        tools:listitem="@layout/doviz_card_item">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
+
+
